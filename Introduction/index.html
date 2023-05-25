@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Introduction</title>
+    <link href="./css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo_style.css">
+    <link rel="icon" href="./picture/logo.ico">
+    <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/prism.js"></script>
+<!--End-->
+    <script>
+        window.Prism = window.Prism || {}
+        window.Prism.manual = false
+        fetch('https://v1.hitokoto.cn')
+            .then(function (res){
+            return res.json();
+            })
+            .then(function (data) {
+            var hitokoto = document.getElementById('hitokoto');
+            hitokoto.innerText = data.hitokoto;
+            })
+            .catch(function (err) {
+            console.error(err);
+            })
+    </script>
+
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+<header class="site-header container animated fadeInDown">
+	<div class="header-wrapper">
+        <h1>Introduction</h1>
+    </div>
+</header>
+
+<div id="menu-container">
+	<div id="menu-1" class="home-intro">
+		<div class="home-intro text-left">
+			<p class="animated fadeInRight">
+                MuG Diffusion is a charting AI for rhythm games based on
+                <a href="https://stablediffusionweb.com/#demo">Stable Diffusion</a>
+                (one of the most powerful AIGC models) with a large modification to incorporate audio waves.
+                Given an audio file, MuG Diffusion is able to generate high-quality diverse charts,
+                which is aligned with the music and highly controllable. Currently,
+                it supports 4K vertical scroll rhythm game (VSRG) only, with the following control options:
+            </p>
+
+            <br>
+
+            <ul class="home-intro">
+                <li>
+                    <p class="animated fadeInLeft"><a style="font-weight: bold">Difficulty:</a> supporting both
+                        <a href="https://osu.ppy.sh/wiki/en/Beatmap/Star_rating">osu! star rating system</a> and
+                        <a href="https://etternaonline.com">Etterna MSD system</a>.
+                    </p>
+                </li>
+                <li>
+                    <p class="animated fadeInLeft"><a style="font-weight: bold">Style:</a> ranked beatmaps (
+                        <a href="https://osu.ppy.sh/home">osu!</a>) / stable charts (
+                        <a href="https://m.mugzone.net">Malody</a>), or other beatmap styles.
+                    </p>
+                </li>
+                <li>
+                    <p class="animated fadeInLeft"><a style="font-weight: bold">LNs:</a>
+                        the ratio of the number of long notes to the total.
+                    </p>
+                </li>
+                <li>
+                    <p class="animated fadeInLeft"><a style="font-weight: bold">Patterns:</a>
+                        supporting all patterns in Etterna MSD system,
+                        including chordjack, stamina, stream, jumpstream, handstream and technical.
+                    </p>
+                </li>
+            </ul>
+
+            <br>
+
+            <p class="animated fadeInRight">
+                MuG Diffusion aims to support other rhythm games in the future (osu!standard, 5-8K VSRG, maimai, etc),
+                and hopes to provide a beneficial AIGC tool for all the charters and players.
+            </p>
+
+		</div>
+        <div style="border-bottom: 2px solid #46494f;"></div>
+       <br /><br />
+
+        <div class="projects-header">
+            <h2 class="animated fadeInRight">Instructions</h2>
+        </div>
+        <div class="projects-holder" style="padding: 0 15% 0 15%">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="col-md-12 col-sm-12 p-1 animated umScaleIn">
+                        <div class="project-item">
+                            <img src="picture/1.png" alt="">
+                            <div class="overlay">
+                                <h4><a href="../Functions/1.html" class="tooltip-test" data-toggle="tooltip" >
+                                    Difficulty Settings
+                                </a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 p-2 animated umScaleIn">
+                        <div class="project-item">
+                            <img src="picture/2.png" alt="">
+                            <div class="overlay">
+                                <h4><a href="../Functions/2.html" class="tooltip-test" data-toggle="tooltip">
+                                    LN Ratio Settings
+                                </a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 p-3 animated umScaleIn">
+                        <div class="project-item">
+                            <img src="picture/3.png" alt="">
+                            <div class="overlay">
+                                <h4><a href="../Functions/3.html" class="tooltip-test" data-toggle="tooltip" >
+                                    Special Settings
+                                </a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 p-4 animated umScaleIn">
+                        <div class="project-item animated umScaleIn">
+                            <img src="picture/4.png" alt="">
+                            <div class="overlay">
+                                <h4><a href="../Functions/4.html" class="tooltip-test" data-toggle="tooltip">
+                                    Model Configurations
+                                </a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="project-item p-5 animated umScaleIn">
+                            <img src="picture/5.png" alt="">
+                            <div class="overlay">
+                                <h4><a href="../Functions/5.html" class="tooltip-test" data-toggle="tooltip">
+                                    Pattern Settings
+                                </a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="border-bottom: 2px solid #46494f;"></div> <br />
+
+        <div class="projects-header">
+            <h2 class="animated fadeInRight">Installation and Running</h2>
+        </div>
+
+        <div class="project-holder">
+            <div class="home-intro text-left">
+                <p class="animated fadeInLeft" style="font-size: 25px">
+                    Bundled executable
+                </p>
+                <p class="animateed fadeInLeft">
+                    a bundled executable containing all the dependencies and model weights in the Windows platform
+                    was packaged, which is available at:
+                </p>
+                <ul class="home-intro" style="text-indent: 15px;">
+                    <li>
+                        <a href="https://drive.google.com/file/d/1-TmLsveLAjRCPwd0iwXS7V1v61MlQ7DM/view">
+                            · Google Drive
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://dl2.hiosu.com/MugDiffusion">
+                            · hiosu
+                        </a>
+                    </li>
+                </ul>
+                <p class="animated fadeInLeft">
+                    Unzip the file and double click "Mug Diffusion.exe", which will open a browser interface for controlling.
+                    It takes around 30 seconds on my computer (NVidia 3050Ti, 4GB memory) to generate four charts for a 3-minute-long audio.
+                </p>
+                <p class="animated fadeInLeft" style="font-size: 25px">
+                    Running from Source
+                </p>
+                <ul class="home-intro" style="text-indent: 15px;">
+                    <li>
+                        · Install<a href="https://www.python.org/downloads/">
+                            Python
+                        </a>
+                    </li>
+                    <li>
+                        · Install <a href="https://pytorch.org/get-started/locally/">
+                            Pytorch
+                        </a>
+                    </li>
+                    <li>
+                        · Install other requirements:
+                        <div style="padding:0 2% 0 2%">
+                            <pre><code class="language-plaintext">pip install -r requirements.txt</code></pre>
+                        </div>
+                    </li>
+                    <li>
+                        · Install <a href="https://ffmpeg.org/download.html">
+                            ffmpeg
+                        </a>, make sure that <code class="language-plaintext">ffmpeg</code> command can execute correctly.
+                    </li>
+                    <li>
+                        · Download the bundled executable, and copy the file
+                        <code class="language-plaintext">
+                            models/ckpt/model.ckpt
+                        </code> and
+                        <code class="language-plaintext">
+                            models/ckpt/model.yaml
+                        </code> to
+                        <code class="language-plaintext">
+                            {REPOSITORY_ROOT}/models/ckpt/*
+                        </code>.
+                    </li>
+                    <li>
+                        · Run the webui:
+                        <div style="padding:0 2% 0 2%">
+                            <pre><code class="language-plaintext">python webui.py</code></pre>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <div class="blog-header text-center">
+                <div class="row">
+                    <div class="col-md-12 copyright">
+                        <p><a href="../index.html">回到首页</a></p>
+                        <p class="power">© 2023 Powered By
+                            <a href="https://osu.ppy.sh/users/6753592" target="_blank"> [Crz]raber </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <span class="border-top"></span>
+        <span class="border-left"></span>
+        <span class="border-right"></span>
+        <span class="border-bottom"></span>
+    </div>
+</div>
+</body>
+</html>

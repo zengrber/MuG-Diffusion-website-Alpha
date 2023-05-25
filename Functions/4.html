@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Model configurations</title>
+    <link href="./css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo_style.css">
+    <link rel="icon" href="./picture/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/prism.js"></script>
+    <link rel="icon" href="../logo.ico">
+<!--End-->
+    <script>
+    window.Prism = window.Prism || {}
+    window.Prism.manual = false
+    fetch('https://v1.hitokoto.cn')
+        .then(function (res){
+        return res.json();
+        })
+        .then(function (data) {
+        var hitokoto = document.getElementById('hitokoto');
+        hitokoto.innerText = data.hitokoto;
+        })
+        .catch(function (err) {
+        console.error(err);
+        })
+    </script>
+
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+<div id="menu-container">
+	<div id="menu-1" class="home-intro">
+		<div class="home-intro text-center" style="margin-bottom: 10px ">
+            <br><br>
+			<h2 class="welcome-title animated fadeInLeft">Model configurations</h2>
+        </div>
+        <div class="home-intro text-left">
+            <p class="animated fadeInLeft">
+                There are 4 model parameters available to be set by users:
+            </p>
+
+            <br>
+
+            <ul>
+                <li><p class="animated fadeInLeft">
+                    <a style="font-weight: bold">1.Sampling count: </a>
+                    You can drag the button inside the slidebar to set the number of samplings.
+                    This decides how many charts MuG-Diffusion will generate.
+                </p></li>
+                <li><p class="animated fadeInLeft">
+                    <a style="font-weight: bold">2.Sampling step: </a>
+                    You can drag the button inside the slidebar to set sampling step.
+                    The meaning of this parameter is complicated to explained, it is recommended to adjust this
+                    parameter only when you know how this parameter works in stable diffusion.
+                </p></li>
+                <li><p class="animated fadeInLeft">
+                    <a style="font-weight: bold">3.CFG Scale: </a>
+                    You can drag the button inside the slidebar to set CFG scale.
+                    The meaning of this parameter is complicated to explain, it is recommended to adjust this
+                    parameter only when you know how this parameter works in stable diffusion.
+                </p></li>
+                <li><p class="animated fadeInLeft">
+                    <a style="font-weight: bold">4.Random seed: </a>
+                    You can input the number directly in the textbox to set the random seed.
+                    This influence the result of the random process during generating. You can set it to whatever you want.
+                </p></li>
+            </ul>
+
+            <br>
+
+            <p class="animated fadeInLeft">
+                For Chinese users, if you want to have a basic view of what sampling steps and CFG scale influences, you can
+                look at
+                <a href="https://www.bilibili.com/read/cv19713295">this page</a>
+            </p>
+
+            <br><br>
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-offset-3 col-md-6 col-sm-12 animated umScaleIn">
+                        <div class="project-item">
+                            <img src="./4.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+        <div class="blog-header text-center">
+            <div class="row">
+                <div class="col-md-12 copyright">
+                    <p><a href="../index.html">回到首页</a></p>
+                    <p class="power">© 2023 Powered By
+                        <a href="https://osu.ppy.sh/users/6753592" target="_blank"> [Crz]raber </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </footer>
+        <!-- templatemo 421 raleway -->
+        <span class="border-top"></span>
+        <span class="border-left"></span>
+        <span class="border-right"></span>
+        <span class="border-bottom"></span>
+    <!-- 网易云音乐 -->
+    <embed frameborder="no" border="0" marginwidth="0" marginheight="0" width=0 height=0 src="//music.163.com/outchain/player?type=0&id=4950890732&auto=1&height=0"></embed>
+        </div>
+    </div>
+</div>
+</body>
+</html>

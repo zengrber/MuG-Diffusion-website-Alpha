@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>FAQ</title>
+    <link href="./css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo_style.css">
+    <link rel="icon" href="./picture/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/prism.js"></script>
+<!--End-->
+    <script>
+    window.Prism = window.Prism || {}
+    window.Prism.manual = false
+    fetch('https://v1.hitokoto.cn')
+        .then(function (res){
+        return res.json();
+        })
+        .then(function (data) {
+        var hitokoto = document.getElementById('hitokoto');
+        hitokoto.innerText = data.hitokoto;
+        })
+        .catch(function (err) {
+        console.error(err);
+        })
+    </script>
+
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+
+<div id="menu-container">
+	<div id="menu-1" class="home-intro">
+		<div class="home-intro text-center" style="margin-bottom: 10px ">
+            <br><br>
+			<h2 class="welcome-title animated fadeInLeft">FAQ</h2>
+        </div>
+        <div class="home-intro text-left">
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a> An error occurred!</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a> 报错了！</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a> Common error solutions:
+                try fixing the error based on the error message. If the message is not understandable, follow these steps:</p>
+            <ul>
+                <li><p class="animated fadeInLeft">1.Check if the browser is Chrome/Edge</p></li>
+                <li><p class="animated fadeInLeft">2.Check if the console is closed</p></li>
+                <li><p class="animated fadeInLeft">3.Check if the proxy is enabled</p></li>
+                <li><p class="animated fadeInLeft">4.check if there are any special characters in the map file and
+                rename it with only English letters if unsure</p></li>
+            </ul>
+            <p class="animated fadeInLeft" style="text-align: left">
+                If all the steps above have been checked and the error still occurs, try restarting the programme;
+                If restarting also don’t work, please provide feedback in the QQ group (548470510).</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a> 常见报错解决方案：
+                看报错的提示自行修复，如果看不懂，那么按照下面的顺序进行操作：</p>
+            <ul>
+                <li><p class="animated fadeInLeft">1.检查浏览器是否为Chrome/Edge</p></li>
+                <li><p class="animated fadeInLeft">2.检查是否关闭了控制台</p></li>
+                <li><p class="animated fadeInLeft">3.检查是否开启了代理</p></li>
+                <li><p class="animated fadeInLeft">4.检查谱面文件中是否有特殊字符,不知道有没有就重命名成只含英文字母的</p></li>
+            </ul>
+            <p class="animated fadeInLeft" style="text-align: left">以上都做了依旧报错
+            则重启，重启无效再在群(548470510)里反馈</p>
+
+            <br>
+
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a>
+                How to use Mug-Diffusion on my mobile phone?</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a>
+                手机怎么使用Mug-Diffusion？</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a> Under most circumstances,
+                mobile devices are not able to run Mug-diffusion. Please use PC instead.</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a> 手机暂时不能使用，请使用电脑。</p>
+
+            <br>
+
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a>
+                How can I play the maps Mug-Diffusion generated on Malody?</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a>
+                Malody怎么玩到？</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a> Malody supports
+                <code class="language-plaintext">.osz</code> file,
+                which means you can open files generated by Mug-Diffusion directly with Malody</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a> Malody支持
+                <code class="language-plaintext">.osz</code>格式的谱面压缩包，直接使用malody打开生成的文件即可。</p>
+
+            <br>
+
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a>
+                I don't tick the Jumpstream box, why there is still lots of jumpstream patterns in the map?</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a>
+                切换没打勾为什么还是有很多切？</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a> Not ticking the box means
+                allowing the machine to arrange this option freely. If you want to reduce specific patterns,
+                please tick the box and select <code class="language-plaintext">Less</code> in the popup window.</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a> 没打勾代表让机器自
+                由发挥，如果你想减少特定排列，请勾选后在弹出的框里选择
+                <code class="language-plaintext">Less</code></p>
+
+            <br>
+
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a>
+                What will happen if I use contradictory parameters?</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a>
+                我使用自相矛盾的参数会怎么样？</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a> There won't be any errors,
+                but it is very likely that you won't get what you want.</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a> 不会报错，但大概率不会生成你想要的东西。</p>
+
+            <br>
+
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a>
+                Can I provide my own maps to Mug-Diffusion in order to train it?</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a>
+                我可以自己喂谱给他训练吗？</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a>  This is temporarily
+                not possible.</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a> 暂时不行。</p>
+
+            <br>
+
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a>
+                Why the map doesn't contain any jacks?</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">Q:  </a>
+                为什么生成不出来叠？</p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a>   If you are trying
+                to generate a jack map with a high BPM, you have to change the parameters of
+                <code class="language-plaintext">minimal inverval(ms) for eliminating minijacks.</code></p>
+            <p class="animated fadeInLeft" style="text-align: left"><a style="font-weight: bold">A:  </a> bpm太高的时候请同步更改
+                去子弹的参数(<code class="language-plaintext">minimal inverval(ms) for eliminating minijacks.</code>)数值。</p>
+
+        </div>
+
+        <footer>
+        <div class="blog-header text-center">
+            <div class="row">
+                <div class="col-md-12 copyright">
+                    <p><a href="../index.html">回到首页</a></p>
+                    <p class="power">© 2023 Powered By
+                        <a href="https://osu.ppy.sh/users/6753592" target="_blank"> [Crz]raber </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </footer>
+        <!-- templatemo 421 raleway -->
+        <span class="border-top"></span>
+        <span class="border-left"></span>
+        <span class="border-right"></span>
+        <span class="border-bottom"></span>
+    <!-- 网易云音乐 -->
+    <embed frameborder="no" border="0" marginwidth="0" marginheight="0" width=0 height=0 src="//music.163.com/outchain/player?type=0&id=4950890732&auto=1&height=0"></embed>
+        </div>
+    </div>
+</div>
+</body>
+</html>
